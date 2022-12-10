@@ -1,0 +1,119 @@
+/* Global */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+  border-left: 0;
+  border-right: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+}
+th {
+  text-transform: uppercase;
+}
+
+input {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+button{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+/* Users */
+
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+}
+
+/* Add user  */
+.user_button {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.user_button_disabled{
+  color: #ddd;
+}
+.user_button_enabled{
+  color: #ff0000;
+  border-color: #ff0000;
+  cursor: pointer;
+}
+
+.add_user_root{
+  display: flex;
+  width: 90%;
+  margin:0 auto;
+  flex-direction: column;
+}
+
+.email {
+  width: 100%;
+  height: 30px;
+  padding:8px;
+  border: 0;
+  font-size: 25px;
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+}
+
+.email:focus {
+  outline:none;
+}
+
+.submit{
+  margin-left: -85px;
+  height: 30px;
+  width: 80px;
+  background: #1565BF;
+  border-radius:4px ;
+  color: white;
+  border: 0;
+}
+
+.email_section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.add_user_main_section{
+  margin-top: 50px;
+  display: flex;
+  height: 100%;
+}
+
+.name_section{
+  width: 49%;
+  border-right: 2px solid #ddd;
+  margin-right: 1%;
+
+}
+
+.role_section{
+  margin: 1em;
+  display: block;
+}
+
+
+.role{
+  width: 49%;
+}
