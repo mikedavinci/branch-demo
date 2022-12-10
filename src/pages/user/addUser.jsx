@@ -21,18 +21,33 @@ const AddUser = ({ onHandleAdduser }) => {
         <input
           type="text"
           className={style.email}
+          placeholder="Insert Email"
           name="email"
+          required
           value={user.email}
           onChange={handleChange}
         />
-        <input type="submit" value="Save" onClick={handleSubmit} className={style.submit} />
+
+        <input
+          type="submit"
+          value="Save"
+          onClick={handleSubmit}
+          className={style.submit}
+        />
       </div>
 
       <div className={style.add_user_main_section}>
         <div className={style.name_section}>
           <label htmlFor="name">Name</label>
           <br />
-          <input type="text" id="name" name="name" value={user.name} onChange={handleChange} />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            value={user.name}
+            onChange={handleChange}
+          />
         </div>
         <div>
           <div className={style.role_section}>
@@ -40,8 +55,8 @@ const AddUser = ({ onHandleAdduser }) => {
               type="radio"
               id="admin"
               name="role"
-              value="admin"
-              checked={user.role === 'admin'}
+              value="ADMIN"
+              checked={user.role === 'ADMIN'}
               onChange={handleChange}
             />
             <label htmlFor="admin">Admin</label>
@@ -51,8 +66,8 @@ const AddUser = ({ onHandleAdduser }) => {
               type="radio"
               id="developer"
               name="role"
-              value="developer"
-              checked={user.role === 'developer'}
+              value="DEVELOPER"
+              checked={user.role === 'DEVELOPER'}
               onChange={handleChange}
             />
             <label htmlFor="developer">Developer</label>
@@ -62,8 +77,8 @@ const AddUser = ({ onHandleAdduser }) => {
               type="radio"
               id="AppManager"
               name="role"
-              value="AppManager"
-              checked={user.role === 'AppManager'}
+              value="APP_MANAGER"
+              checked={user.role === 'APP_MANAGER'}
               onChange={handleChange}
             />
             <label htmlFor="AppManager">App Manager</label>
@@ -73,8 +88,8 @@ const AddUser = ({ onHandleAdduser }) => {
               type="radio"
               id="marketing"
               name="role"
-              value="marketing"
-              checked={user.role === 'marketing'}
+              value="MARKETING"
+              checked={user.role === 'MARKETING'}
               onChange={handleChange}
             />
             <label htmlFor="marketing">Marketing</label>
@@ -84,8 +99,8 @@ const AddUser = ({ onHandleAdduser }) => {
               type="radio"
               id="sales"
               name="role"
-              value="sales"
-              checked={user.role === 'sales'}
+              value="SALES"
+              checked={user.role === 'SALES'}
               onChange={handleChange}
             />
             <label htmlFor="sales">Sales</label>

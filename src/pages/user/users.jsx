@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Users = ({
   users,
@@ -8,6 +9,7 @@ const Users = ({
   onHandleUserRemove,
   loading,
 }) => {
+  const navigate = useNavigate();
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -15,15 +17,27 @@ const Users = ({
     <div>
       <div className={style.head}>
         <h2>Users</h2>
-        <button
-          className={`${style.user_button} ${
-            !isUserDeleteEnable ? style.user_button_disabled : style.user_button_enabled
+        <div>
+          <button
+            className={`${style.user_button}
           }`}
-          disabled={!isUserDeleteEnable}
-          onClick={onHandleUserRemove}
-        >
-          Delete
-        </button>
+            onClick={() => navigate('/add')}
+            style={{ cursor: 'pointer' }}
+          >
+            Add User
+          </button>{' '}
+          <button
+            className={`${style.user_button} ${
+              !isUserDeleteEnable
+                ? style.user_button_disabled
+                : style.user_button_enabled
+            }`}
+            disabled={!isUserDeleteEnable}
+            onClick={onHandleUserRemove}
+          >
+            Delete
+          </button>
+        </div>
       </div>
       <table>
         <thead>
